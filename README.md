@@ -1,10 +1,10 @@
 # WinBackdoorLib
-a simple module to create "reverse shell or backdoor" simply with Windows API
+Windows API を使って簡単に「リバースシェル・バックドア」を作成するライブラリ。
 
 ![Image1](capture.PNG)
 
 
-## example Payload :
+## ペイロードの例 :
   ```cpp
 #include "backdoorlib.h"
 #include <iostream>
@@ -42,11 +42,11 @@ int main()
 }
   ```
 
-## Compile Payload :
-  ### g++ backdoorlib.cpp reverse_powershell.cpp -o payload.exe -lws2_32 -s -ffunction-sections -fdata-sections -Wno-write-strings -fno-exceptions -fmerge-all-constants -static-libstdc++ -static-libgcc -lwininet
+## ペイロードのコンパイル方法 :
+  ### <g++ backdoorlib.cpp reverse_powershell.cpp -o payload.exe -lws2_32 -s -function-sections -fdata-sections -Wno-write-strings -fno-exceptions -fmerge-all-constants -static-libstdc++ -static-libgcc -lwininet>を実行してください。
   
 
-## List Function in Header :
+## ヘッダーファイル内の関数 :
 ```cpp
 void hello_world(void);
 char * raw_input(char *input_string);
